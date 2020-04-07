@@ -1,0 +1,3 @@
+amazon price
+title = response.css('.a-size-medium.a-text-normal::text').getall()
+price_whole = response.css('a.price-whole::text').getall()
