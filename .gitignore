@@ -3,3 +3,5 @@
 *.db
 *.csv
 config.py
+Pipfile
+Pipfile.lock
