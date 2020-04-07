@@ -1,3 +1,7 @@
 amazon price
+#run first
+scrapy shell 'https://www.amazon.com/s?k=gtx+1080&ref=nb_sb_noss_2'
+
+#parsing and storing in variable
 title = response.css('.a-size-medium.a-text-normal::text').getall()
 price_whole = response.css('a.price-whole::text').getall()
