@@ -16,7 +16,7 @@ NEWSPIDER_MODULE = 'tutorial.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'tutorial (+http://www.yourdomain.com)'
+USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
@@ -53,7 +53,7 @@ ROBOTSTXT_OBEY = True
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'tutorial.middlewares.TutorialDownloaderMiddleware': 543,
+    #'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware': 1,
 #}
 
 # Enable or disable extensions

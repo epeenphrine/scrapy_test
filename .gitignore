@@ -5,3 +5,4 @@
 config.py
 Pipfile
 Pipfile.lock
+__pycache__/
