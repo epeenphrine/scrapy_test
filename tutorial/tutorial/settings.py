@@ -8,6 +8,8 @@
 #     https://docs.scrapy.org/en/latest/topics/settings.html
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
+import json
+
 
 BOT_NAME = 'tutorial'
 
@@ -52,9 +54,13 @@ ROBOTSTXT_OBEY = True
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
-#DOWNLOADER_MIDDLEWARES = {
-    #'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware': 1,
-#}
+with open('C:/Users/dong/Desktop/repo/scrapy_test/tutorial/tutorial/proxylist.json') as f:
+    ROTATING_PROXY_LIST = json.load(f)
+
+DOWNLOADER_MIDDLEWARES = {
+    'rotating_proxies.middlewares.RotatingProxyMiddleware': 610,
+    'rotating_proxies.middlewares.BanDetectionMiddleware': 620,
+}
 
 # Enable or disable extensions
 # See https://docs.scrapy.org/en/latest/topics/extensions.html
